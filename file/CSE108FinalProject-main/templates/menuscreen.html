@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Slackey&display=swap" rel="stylesheet">
+    <title>menu</title>
+</head>
+<body>
+    <div style="display: flex; align-items: center; justify-content: space-between;">
+        <p>Welcome {{ username }}!</p>
+    
+        <h1 style="margin: 0; font-size: 24px; text-align: center;">UC Merced</h1>
+    
+        <p style="margin: 0;">
+            <a href="{{ url_for('logout') }}">Sign Out</a>
+        </p>
+    </div>
+    <h1>menu screen</h1>
+</body>
+</html>

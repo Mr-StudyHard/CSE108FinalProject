@@ -1,0 +1,126 @@
+body{
+    background-color: #d9d6d6;
+    font-family: Slackey;
+}
+h1 {
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: 40px;
+    font: helvetica;
+  }
+
+p {
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    margin-right: 10px;
+    font: helvetica;
+    font-weight: bold;
+  }
+
+button {
+    background-color: rgb(59, 59, 168);
+    color: rgb(255, 255, 255);
+    margin: 10px;
+    min-width: 160px;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 15px;
+ }
+
+.center {
+    text-align: center;
+}
+
+.tab-container {
+  width: 600px;
+  margin: 0 auto;
+  background-color: #5577a2; 
+  padding: 20px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  background-color: #8da5cc; 
+}
+
+.tab-link {
+  flex: 1;
+  padding: 10px;
+  cursor: pointer;
+  background-color: inherit;
+  border: none;
+  outline: none;
+  text-align: center;
+  font-weight: bold;
+  color: #000;
+  transition: background-color 0.3s;
+}
+
+.tab-link:hover {
+  background-color: #6789b5;
+}
+
+.tab-link.active {
+  background-color: #5577a2; 
+  color: #fff;
+}
+
+.tab-content {
+  background-color: #ffffff;
+  padding: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #8da5cc;
+  font-weight: bold;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f3f3f3;
+}
+
+.course-container, .students-container {
+  width: 600px;
+  margin: 20px auto;
+  background-color: #5577a2;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+
+.drop{
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  background-color: rgb(80, 87, 231);
+  min-width: 60px;
+  padding: 1px;
+ }
+
+ 
+ .add{
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  background-color: rgb(80, 87, 231);
+  min-width: 60px;
+  padding: 1px;
+ }
+
+ .edit{
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  background-color: rgb(80, 87, 231);
+  min-width: 60px;
+  padding: 1px;
+ }

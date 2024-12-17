@@ -1,0 +1,7 @@
+{% extends 'admin/master.html'%}
+
+{% block body %}
+    <h1>Admin Home</h1>
+    <p>Access all the databases and create, edit, and delete in them!</p>
+    <a href={{ url_for('logout') }}>Sign Out</a>
+{% endblock %}

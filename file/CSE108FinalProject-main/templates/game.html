@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <script src="https://cdn.socket.io/4.0.1/socket.io.min.js"></script>  <!-- Include Socket.IO -->
+</head>
+<body>
+    <p id="gameStatus">Waiting for players...</p>
+
+    <button onclick="joinGame()">Join Game</button>
+    <button onclick="sendMove()">Move</button>
+    <button onclick="leaveGame()">Leave Game</button>
+
+    <script>
+        const socket = io.connect();  // Connect to the SocketIO server
+
+        // Display welcome message upon connecting
+        socket.on('message', function(data) {
+            console.log(data);
+            document.getElementById('gameStatus').innerText = data;
+        });
+
+        // Send join game request
+        function joinGame() {
+            socket.emit('join_game');
+        }
+
+        // Send a move action to the server
+        function sendMove() {
+            const moveData = { x: 10, y: 20 };  // Example move data, customize it for your game
+            socket.emit('move', moveData);  // Send the move event
+        }
+
+        // Listen for 'move' event to update the game state
+        socket.on('move', function(data) {
+            console.log('Move received: ', data);
+            // Update the game state based on the move data
+        });
+
+        function leaveGame() {
+            socket.emit('leave_game');
+        }
+    </script>
+</body>
+</html>
+
